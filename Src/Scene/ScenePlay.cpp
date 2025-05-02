@@ -59,7 +59,11 @@ void ScenePlay::Load()
 //プレイシーン通常処理
 void ScenePlay::Step()
 {
-
+	if (Log::IsButtonPush(InputButton::Decide))
+	{
+		stateFunc = (void (SceneBase::*)()) & ScenePlay::Fin;
+		return;
+	}
 
 	Draw();
 }

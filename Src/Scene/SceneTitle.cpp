@@ -57,7 +57,11 @@ void SceneTitle::Load()
 //ƒ^ƒCƒgƒ‹’Êíˆ—
 void SceneTitle::Step()
 {
-	
+	if (Log::IsButtonPush(InputButton::Decide))
+	{
+		stateFunc = (void (SceneBase::*)()) & SceneTitle::Fin;
+		return;
+	}
 	
 	Draw();
 }

@@ -70,7 +70,7 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 			Input::DataSet();
 
 			//0ÉLÅ[Ç≈èIóπ
-			if (CheckHitKey(KEY_INPUT_0) && CheckHitKey(KEY_INPUT_LSHIFT))
+			if (CheckHitKey(KEY_INPUT_ESCAPE))
 			{
 				break;
 			}
