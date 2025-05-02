@@ -169,11 +169,6 @@ float Time::GetRoleDelta(int target)
 		}
 		break;
 	case (int)TimeKind::PLAYER1:
-	case (int)TimeKind::PLAYER2:
-	case (int)TimeKind::PLAYER3:
-	case (int)TimeKind::PLAYER4:
-	case (int)TimeKind::PLAYER5:
-	case (int)TimeKind::PLAYER6:
 		if (stop_Flag[(int)TimeKind::ALL] || stop_Flag[target])
 		{
 			return 0.0f;
@@ -247,21 +242,6 @@ Time::TimeKind Time::GetTimeKind_byCharaID(int ID)
 		{
 		case 0:
 			return TimeKind::PLAYER1;
-			break;
-		case 1:
-			return TimeKind::PLAYER2;
-			break;
-		case 2:
-			return TimeKind::PLAYER3;
-			break;
-		case 3:
-			return TimeKind::PLAYER4;
-			break;
-		case 4:
-			return TimeKind::PLAYER5;
-			break;
-		case 5:
-			return TimeKind::PLAYER6;
 			break;
 		default:
 			return TimeKind::ALL;

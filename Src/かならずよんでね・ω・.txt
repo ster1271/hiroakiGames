@@ -1,0 +1,7 @@
+SetUseASyncLoadFlag(TRUE);
+ExampleImageHandle = LoadGraph(EXAMPLE_IMAGE_PATH);
+Loading::AddLoadNum();
+SetUseASyncLoadFlag(FALSE);
+
+こうやってロードしないとバグります
+気をつけてね

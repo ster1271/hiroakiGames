@@ -8,8 +8,6 @@
 
 SceneResult::SceneResult()
 {
-	resultImageHandle = -1;
-
 	stateFunc = (void (SceneBase::*)()) & SceneResult::Load;
 }
 
@@ -31,10 +29,7 @@ void SceneResult::Load()
 {
 	if (!isLoadStart)
 	{
-		SetUseASyncLoadFlag(TRUE);
-		resultImageHandle = LoadGraph(RESULT_IMAGE_PATH);
-		Loading::AddLoadNum();
-		SetUseASyncLoadFlag(FALSE);
+		//ここにロード関数を全部いれてね
 
 		Loading::LoadStart();
 		isLoadStart = true;
@@ -62,8 +57,6 @@ void SceneResult::Step()
 //クリア描画処理
 void SceneResult::Draw()
 {
-	DrawGraph(0, 0, resultImageHandle, true);
-
 	stateFunc = (void (SceneBase::*)()) & SceneResult::Step;
 }
 
@@ -79,7 +72,8 @@ void SceneResult::Fin()
 	}
 	if (Loading::IsLoadWait())
 	{
-		DeleteGraph(resultImageHandle);
+		//終了関数はここ
+		//FinとかDeleteInstanceとか
 
 		SceneManager::NextSceneID = SCENEID::SCENE_ID_TITLE;
 	}

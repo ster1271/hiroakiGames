@@ -7,14 +7,10 @@
 #include "Font/Font.h"
 #include "Scene/Scene.h"
 #include "Loading/Loading.h"
-#include "Shader/Shader.h"
 
 #include "Time/Time.h"
 
 #include "DebugString/DebugString.h"
-
-#include "Effekseer_wrap/Effekseer_wrap.h"
-#include "Effect/Effect.h"
 
 int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nCmdShow)
 {
@@ -59,18 +55,11 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 
 	Loading::Init();
 
-	Shader::Init();
-	Shader::SetShader();
-
 	SceneManager scene_manager;
 	scene_manager.SceneInit();
 
 	FrameRate::Init();
 	Time::Init();
-
-	CEffekseerCtrl::Init(60, 6000);
-
-	OriEffectManager::GetInstance().Load();
 
 	//ゲームのメインループ
 	while (ProcessMessage() != -1)
@@ -121,13 +110,6 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	SoundManager::Fin();
 	Font::Fin();
 	Loading::Fin();
-	Shader::Fin();
-
-	OriEffectManager::GetInstance().Fin();
-	OriEffectManager::DeleteInstance();
-
-	CEffekseerCtrl::StopAll();
-	CEffekseerCtrl::Exit();
 
 	//DxLibの後処理
 	DxLib_End();

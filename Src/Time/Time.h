@@ -8,11 +8,6 @@ public:
 	{
 		ALL,	//最上位
 		PLAYER1,	//プレイヤー1のみ
-		PLAYER2,	//プレイヤー2のみ
-		PLAYER3,	//プレイヤー3のみ
-		PLAYER4,	//プレイヤー4のみ
-		PLAYER5,	//プレイヤー5のみ
-		PLAYER6,	//プレイヤー6のみ
 
 		KIND_NUM
 	};
