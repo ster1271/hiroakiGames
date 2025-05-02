@@ -13,8 +13,6 @@
 
 #include "../Time/Time.h"
 
-#include "../CollisionManager/CollisionManager.h"
-
 #include "../Font/Font.h"
 
 //シングルトン
@@ -61,11 +59,7 @@ void ScenePlay::Load()
 //プレイシーン通常処理
 void ScenePlay::Step()
 {
-	CollisionManager::CheckHitAttackArea();
-	CollisionManager::CheckHitBindAttack();
 
-	//カメラ
-	CollisionManager::CameraSpring();
 
 	Draw();
 }
