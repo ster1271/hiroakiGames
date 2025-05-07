@@ -74,7 +74,7 @@ void ScenePlay::Draw()
 	//以降UI
 	Font::DrawFormatString(FontType::HGP創英角ポップ体24_10,
 		5, 10, GetColor(255, 255, 255),
-		"色の違うクモを倒しましょう！");
+		"プレイ");
 }
 
 //プレイシーン後処理

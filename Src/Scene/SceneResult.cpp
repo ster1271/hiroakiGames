@@ -5,6 +5,7 @@
 #include "../System/SoundManager/SoundManager.h"
 
 #include "../Loading/Loading.h"
+#include "../Font/Font.h"
 
 SceneResult::SceneResult()
 {
@@ -58,6 +59,9 @@ void SceneResult::Step()
 void SceneResult::Draw()
 {
 	stateFunc = (void (SceneBase::*)()) & SceneResult::Step;
+	Font::DrawFormatString(FontType::HGP創英角ポップ体24_10,
+		5, 10, GetColor(255, 255, 255),
+		"リザルト");
 }
 
 //クリア後処理

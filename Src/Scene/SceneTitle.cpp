@@ -69,7 +69,9 @@ void SceneTitle::Step()
 //タイトル描画処理
 void SceneTitle::Draw()
 {
-	
+	Font::DrawFormatString(FontType::HGP創英角ポップ体24_10,
+		5, 10, GetColor(255, 255, 255),
+		"タイトル");
 }
 
 //タイトル後処理
