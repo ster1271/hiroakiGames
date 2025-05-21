@@ -3,6 +3,13 @@
 class CPlayer
 {
 
+public:
+
+	enum TRIGGER
+	{
+
+	};
+
 private:
 
 	int m_PlayerHP;	// ライフポイント
