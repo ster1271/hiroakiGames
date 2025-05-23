@@ -30,6 +30,8 @@ void CCardManager::Draw()
 		DrawBox(cCard[Index].GetPositionX(), cCard[Index].GetPositionY(),
 			cCard[Index].GetPositionX() + 100, cCard[Index].GetPositionY() + 120,
 			GetColor(255, 0, 0), false);
+
+		
 	}
 
 	

@@ -32,6 +32,7 @@ void ScenePlay::Init()
 {
 	SoundManager::SetFadeIn(SoundKind::BGM_BATTLE, 0.5f);
 	cCardManager.Init();
+	cStage.Init();
 
 	Time::StopReset(-1);
 	Time::SlowReset(-1);
@@ -47,6 +48,7 @@ void ScenePlay::Load()
 		//‚±‚±‚Éƒ[ƒhŠÖ”‚ğ‘S•”‚¢‚ê‚Ä‚Ë
 		cCardManager.Load();
 		cPlayer.Load();
+		cStage.Load();
 
 		Loading::LoadStart();
 		isLoadStart = true;
@@ -64,6 +66,7 @@ void ScenePlay::Step()
 {
 	cCardManager.Step();
 	cPlayer.Step();
+	cStage.Step();
 
 	if (Log::IsButtonPush(InputButton::Decide))
 	{

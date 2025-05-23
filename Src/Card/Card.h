@@ -1,4 +1,5 @@
 #pragma once
+#include "DxLib.h"
 
 class CCard
 {
@@ -21,6 +22,9 @@ private:
 
 	int TriggerCard;	
 	int EffectCard;		
+
+	int m_CardHandle;
+	int m_CardFlameHandle;
 
 public:
 

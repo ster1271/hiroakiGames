@@ -17,6 +17,7 @@ private:
 	int m_PlayerHP;	// ライフポイント
 	int m_PlayerGP; // ガードポイント
 
+	int m_FontHandle;
 	int m_StateHndl;//ステータスハンドル
 
 public:

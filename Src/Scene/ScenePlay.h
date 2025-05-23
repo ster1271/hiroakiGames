@@ -4,6 +4,7 @@
 #include "../Common.h"
 #include "Scene.h"
 #include "../Card/CardManager.h"
+#include "../Stage/Stage.h"
 #include "../Player/Player.h"
 #include "../Enemy/EnemyManager.h"
 
@@ -15,6 +16,7 @@ private:
 	CPlayer cPlayer;
 	CEnemyManager cEnemyManager;
 	CCardManager cCardManager;
+	CStage cStage;
 
 public:
 	void Init();
