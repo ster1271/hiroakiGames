@@ -9,6 +9,7 @@ enum class FontType
 	HGP‘n‰pŠpƒ|ƒbƒv‘Ì,
 	HGP‘n‰pŠpƒ|ƒbƒv‘Ì24_10,
 	HGP‘n‰pŠpƒ|ƒbƒv‘Ì64_20,
+	HGP‘n‰pŠpƒ|ƒbƒv‘Ì128_20,
 
 	KindNum
 };
@@ -24,6 +25,7 @@ constexpr int FONT_SIZE[(int)FontType::KindNum] =
 	16,
 	24,
 	64,
+	128,
 };
 
 constexpr int FONT_THICK[(int)FontType::KindNum] =
@@ -31,11 +33,13 @@ constexpr int FONT_THICK[(int)FontType::KindNum] =
 	5,
 	10,
 	20,
+	20,
 };
 
 constexpr int FONT_EDGE_THICK[(int)FontType::KindNum] =
 {
 	1,
+	2,
 	2,
 	2,
 };

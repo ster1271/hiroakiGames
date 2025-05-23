@@ -32,7 +32,8 @@ void SceneTitle::Init()
 
 	SoundManager::SetFadeIn(SoundKind::BGM_TITLE, 0.5f);
 
-
+	m_Time = 0;
+	m_Count = 0;
 
 	stateFunc = (void (SceneBase::*)()) & SceneTitle::Step;
 }
@@ -63,6 +64,12 @@ void SceneTitle::Step()
 		return;
 	}
 	
+	m_Time++;
+	if (m_Time % 60 == 0) {
+		m_Count++;
+
+	}
+
 	Draw();
 }
 
@@ -72,6 +79,38 @@ void SceneTitle::Draw()
 	Font::DrawFormatString(FontType::HGP創英角ポップ体24_10,
 		5, 10, GetColor(255, 255, 255),
 		"タイトル");
+
+	if (m_Count >= 1) {
+		Font::DrawFormatString(FontType::HGP創英角ポップ体128_20,
+			250, 580, GetColor(255, 255, 255),
+			"T");
+	}
+
+	if (m_Count >= 2) {
+		Font::DrawFormatString(FontType::HGP創英角ポップ体128_20,
+			350, 580, GetColor(255, 255, 255),
+			"I");
+	}
+
+	if (m_Count >= 3) {
+		Font::DrawFormatString(FontType::HGP創英角ポップ体128_20,
+			450, 580, GetColor(255, 255, 255),
+			"T");
+	}
+
+	if (m_Count >= 4) {
+		Font::DrawFormatString(FontType::HGP創英角ポップ体128_20,
+			550, 580, GetColor(255, 255, 255),
+			"L");
+	}
+
+	if (m_Count >= 5) {
+		Font::DrawFormatString(FontType::HGP創英角ポップ体128_20,
+			650, 580, GetColor(255, 255, 255),
+			"E");
+	}
+
+
 }
 
 //タイトル後処理
