@@ -5,6 +5,8 @@ class SceneResult : public SceneBase
 {
 private:
 
+	int m_ResultHndle;		//リザルト画像ハンドル
+
 protected:
 	void Init();
 	void Load();
