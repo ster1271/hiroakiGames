@@ -23,6 +23,8 @@ void CCardManager::Step()
 
 void CCardManager::Draw()
 {
+	DrawBox(0, 0, 1280, 720, GetColor(0, 255, 0), -1);
+
 	for (int Index = 0; Index < CARD_MAX; Index++)
 	{
 		DrawBox(cCard[Index].GetPositionX(), cCard[Index].GetPositionY(),

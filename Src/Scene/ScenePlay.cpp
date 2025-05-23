@@ -46,6 +46,7 @@ void ScenePlay::Load()
 	{
 		//ここにロード関数を全部いれてね
 		cCardManager.Load();
+		cPlayer.Load();
 
 		Loading::LoadStart();
 		isLoadStart = true;
@@ -62,6 +63,7 @@ void ScenePlay::Load()
 void ScenePlay::Step()
 {
 	cCardManager.Step();
+	cPlayer.Step();
 
 	if (Log::IsButtonPush(InputButton::Decide))
 	{
@@ -76,6 +78,8 @@ void ScenePlay::Step()
 void ScenePlay::Draw()
 {
 	cCardManager.Draw();
+
+	cPlayer.Draw();
 
 	//以降UI
 	Font::DrawFormatString(FontType::HGP創英角ポップ体24_10,
@@ -98,6 +102,7 @@ void ScenePlay::Fin()
 		//終了関数はここ
 		//FinとかDeleteInstanceとか
 		cCardManager.Exit();
+		cPlayer.Exit();
 
 		SceneManager::NextSceneID = SCENEID::SCENE_ID_RESULT;
 	}

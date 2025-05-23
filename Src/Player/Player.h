@@ -1,4 +1,5 @@
 #pragma once
+#include "DxLib.h"
 
 class CPlayer
 {
@@ -15,6 +16,8 @@ private:
 	int m_PlayerHP;	// ライフポイント
 	int m_PlayerGP; // ガードポイント
 
+	int m_StateHndl;//ステータスハンドル
+
 public:
 	
 	void Init();
@@ -22,6 +25,8 @@ public:
 	void Load();
 
 	void Step();
+
+	void Draw();
 
 	void Exit();
 
