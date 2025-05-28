@@ -37,7 +37,6 @@ void CCardManager::Draw()
 
 		DrawGraph((int)cCard[Index].GetPositionX(), (int)cCard[Index].GetPositionY(), m_CardHandle, false);
 		
-		
 	}
 
 	DrawRotaGraph(500, 600, 0.8f, 0.0f, m_CardHandle, false);
