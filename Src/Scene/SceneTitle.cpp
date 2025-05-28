@@ -34,8 +34,12 @@ void SceneTitle::Init()
 
 	m_Time = 0;
 	m_Count = 0;
+	m_TitleHndle = 0;
+	//‚±‚±‚Éƒ[ƒhŠÖ”‚ð‘S•”‚¢‚ê‚Ä‚Ë
+	m_TitleHndle = LoadGraph(SCENE_TITLE_TEXT);
 
 	stateFunc = (void (SceneBase::*)()) & SceneTitle::Step;
+
 }
 
 //ƒ^ƒCƒgƒ‹“Ç‚Ýž‚Ý
@@ -44,6 +48,7 @@ void SceneTitle::Load()
 	if (!isLoadStart)
 	{
 		//‚±‚±‚Éƒ[ƒhŠÖ”‚ð‘S•”‚¢‚ê‚Ä‚Ë
+		m_TitleHndle = LoadGraph(SCENE_TITLE_TEXT);
 
 		Loading::LoadStart();
 		isLoadStart = true;
@@ -76,40 +81,62 @@ void SceneTitle::Step()
 //ƒ^ƒCƒgƒ‹•`‰æˆ—
 void SceneTitle::Draw()
 {
-	Font::DrawFormatString(FontType::HGP‘n‰pŠpƒ|ƒbƒv‘Ì24_10,
+	/*Font::DrawFormatString(FontType::HGP‘n‰pŠpƒ|ƒbƒv‘Ì24_10,
 		5, 10, GetColor(255, 255, 255),
-		"ƒ^ƒCƒgƒ‹");
+		"ƒ^ƒCƒgƒ‹");*/
 
 	if (m_Count >= 1) {
 		Font::DrawFormatString(FontType::HGP‘n‰pŠpƒ|ƒbƒv‘Ì128_20,
-			250, 580, GetColor(255, 255, 255),
-			"T");
+			250, 140, GetColor(255, 255, 255),
+			"C");
 	}
 
 	if (m_Count >= 2) {
 		Font::DrawFormatString(FontType::HGP‘n‰pŠpƒ|ƒbƒv‘Ì128_20,
-			350, 580, GetColor(255, 255, 255),
-			"I");
+			350, 140, GetColor(255, 255, 255),
+			"A");
 	}
 
 	if (m_Count >= 3) {
 		Font::DrawFormatString(FontType::HGP‘n‰pŠpƒ|ƒbƒv‘Ì128_20,
-			450, 580, GetColor(255, 255, 255),
-			"T");
+			450, 140, GetColor(255, 255, 255),
+			"R");
 	}
 
 	if (m_Count >= 4) {
 		Font::DrawFormatString(FontType::HGP‘n‰pŠpƒ|ƒbƒv‘Ì128_20,
-			550, 580, GetColor(255, 255, 255),
-			"L");
+			550, 140, GetColor(255, 255, 255),
+			"D");
 	}
 
 	if (m_Count >= 5) {
 		Font::DrawFormatString(FontType::HGP‘n‰pŠpƒ|ƒbƒv‘Ì128_20,
-			650, 580, GetColor(255, 255, 255),
-			"E");
+			650, 140, GetColor(255, 255, 255),
+			"F");
+	}
+	if (m_Count >= 5) {
+		Font::DrawFormatString(FontType::HGP‘n‰pŠpƒ|ƒbƒv‘Ì128_20,
+			750, 140, GetColor(255, 255, 255),
+			"I");
+	}
+	if (m_Count >= 5) {
+		Font::DrawFormatString(FontType::HGP‘n‰pŠpƒ|ƒbƒv‘Ì128_20,
+			850, 140, GetColor(255, 255, 255),
+			"G");
+	}
+	if (m_Count >= 5) {
+		Font::DrawFormatString(FontType::HGP‘n‰pŠpƒ|ƒbƒv‘Ì128_20,
+			950, 140, GetColor(255, 255, 255),
+			"H");
+	}
+	if (m_Count >= 5) {
+		Font::DrawFormatString(FontType::HGP‘n‰pŠpƒ|ƒbƒv‘Ì128_20,
+			1050, 140, GetColor(255, 255, 255),
+			"T");
 	}
 
+
+	DrawGraph(650, 600, m_TitleHndle, true);
 
 }
 
