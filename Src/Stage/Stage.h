@@ -21,6 +21,9 @@ private:
 	int m_NowStage;	// 現在のステージ 
 	int m_NowTurn; // 現在のターン
 
+	bool m_Start_Phase;	// そのフェイズのスタート時だけ行う処理
+	bool m_End_Phase;	// そのフェイズの終了時だけ行う処理
+
 	int m_Direction_Time;	// 演出時間
 
 	PHASE_STATE m_ePhaseState;	// フェイズ管理の変数

@@ -82,9 +82,9 @@ void ScenePlay::Draw()
 	cStage.Draw();
 
 	//以降UI
-	Font::DrawFormatString(FontType::HGP創英角ポップ体24_10,
+	/*Font::DrawFormatString(FontType::HGP創英角ポップ体24_10,
 		5, 10, GetColor(255, 255, 255),
-		"プレイ");
+		"プレイ");*/
 }
 
 //プレイシーン後処理

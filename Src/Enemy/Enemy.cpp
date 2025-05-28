@@ -23,3 +23,8 @@ void CEnemy::Exit()
 {
 
 }
+
+void CEnemy::Attack()
+{
+	SetDamage(10);
+}

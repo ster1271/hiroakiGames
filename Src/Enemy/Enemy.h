@@ -7,6 +7,8 @@ private:
 	int m_HP;	// ‘Ì—Í
 	int m_AP;	// UŒ‚—Í
 
+	int m_Action_Order;	// s“®‡
+
 	bool m_IsActive;	// ¶‘¶ƒtƒ‰ƒO
 
 public:
@@ -18,6 +20,8 @@ public:
 	void Step();
 
 	void Exit();
+
+	void Attack();
 
 	void SetDamage(int Damage) { m_HP -= Damage; }
 

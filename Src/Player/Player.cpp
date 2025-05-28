@@ -10,8 +10,8 @@ void CPlayer::Load()
 {
 	m_StateHndl = LoadGraph(STATE_HNDL_PATH);
 	m_FontHandle = CreateFontToHandle("MS ÉSÉVÉbÉN", 24, -1);
-	m_PlayerHP = 0;
-	m_PlayerGP = 0;
+	m_PlayerHP = 100;
+	m_PlayerGP = 100;
 }
 
 void CPlayer::Step()

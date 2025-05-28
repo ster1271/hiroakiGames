@@ -20,6 +20,7 @@ public:
 
 private:
 
+	int m_BeforePlayerHP;
 	int m_PlayerHP;	// ライフポイント
 	int m_PlayerGP; // ガードポイント
 	int m_PlayerAP;	// 攻撃力
@@ -38,5 +39,7 @@ public:
 	void Draw();
 
 	void Exit();
+
+	void CheckTrigger();
 
 };
