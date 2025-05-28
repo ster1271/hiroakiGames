@@ -31,7 +31,7 @@ ScenePlay::~ScenePlay()
 void ScenePlay::Init()
 {
 	SoundManager::SetFadeIn(SoundKind::BGM_BATTLE, 0.5f);
-	cCardManager.Init();
+
 	cStage.Init();
 
 	Time::StopReset(-1);
@@ -46,8 +46,7 @@ void ScenePlay::Load()
 	if (!isLoadStart)
 	{
 		//ここにロード関数を全部いれてね
-		cCardManager.Load();
-		cPlayer.Load();
+		
 		cStage.Load();
 
 		Loading::LoadStart();
@@ -64,8 +63,7 @@ void ScenePlay::Load()
 //プレイシーン通常処理
 void ScenePlay::Step()
 {
-	cCardManager.Step();
-	cPlayer.Step();
+	
 	cStage.Step();
 
 	if (Log::IsButtonPush(InputButton::Decide))
@@ -80,9 +78,8 @@ void ScenePlay::Step()
 //プレイシーン描画処理
 void ScenePlay::Draw()
 {
-	cCardManager.Draw();
 
-	cPlayer.Draw();
+	cStage.Draw();
 
 	//以降UI
 	Font::DrawFormatString(FontType::HGP創英角ポップ体24_10,
@@ -104,8 +101,9 @@ void ScenePlay::Fin()
 	{
 		//終了関数はここ
 		//FinとかDeleteInstanceとか
-		cCardManager.Exit();
-		cPlayer.Exit();
+
+		cStage.Exit();
+	
 
 		SceneManager::NextSceneID = SCENEID::SCENE_ID_RESULT;
 	}

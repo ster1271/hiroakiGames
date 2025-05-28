@@ -1,13 +1,13 @@
 #pragma once
 #include "Enemy.h"
 
-#define ENEMY_MAX (5)	// “G‚ÌÅ‘å”
+#define ENEMY_MAX (6)	// “G‚ÌÅ‘å”
 
 class CEnemyManager
 {
 private:
 
-	int Action_Order;	// s“®‡
+	int m_Action_Order;	// s“®‡
 
 	CEnemy cEnemy[ENEMY_MAX];
 
@@ -18,6 +18,8 @@ public:
 	void Load();
 
 	void Step();
+
+	void Draw();
 
 	void Exit();
 

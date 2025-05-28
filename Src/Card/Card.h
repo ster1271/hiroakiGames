@@ -23,8 +23,7 @@ private:
 	int TriggerCard;	
 	int EffectCard;		
 
-	int m_CardHandle;
-	int m_CardFlameHandle;
+	
 
 public:
 
